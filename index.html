@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+	.bg{
+		background-image: url(пляж.jpg);
+		background-size: cover;
+		height: 738px;
+	}
+	.list{
+		width: 200px;
+		height: 360px;	
+		background-color: orange;
+		text-align: center;
+	}
+	.umbrella1{
+		position: absolute;
+		right: 200px;
+		bottom: 190px;
+		background-color: none;
+		width: 100px;
+	}
+	.ship{
+		position: absolute;
+		left: 680px;
+		bottom: 190px;
+		background-color: none;
+		width: 30px;
+	}
+	.umbrella2{
+		position: absolute;
+		right: 230px;
+		bottom: 150px;
+		background-color: none;
+		width: 100px;
+		transform: rotate(25deg);
+	}
+	.apple{
+		position: absolute;
+		top: 440px;
+		right: 162px;
+		width: 20px;
+		background-color: none;
+	}
+	.ball1{
+		position: absolute;
+		bottom: 100px;
+		right: 500px;
+		width: 50px;
+		background-color: none;
+	}
+	.ball2{
+		position: absolute;
+		bottom: 80px;
+		right: 480px;
+		width: 50px;
+		background-color: none;
+	}
+	.ball3{
+		position: absolute;
+		bottom: 50px;
+		right: 600px;
+		width: 50px;
+		background-color: none;
+	}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="list">
+			<h1>Найти:</h1>
+			<h2 class="text1">Игрушечный кораблик</h2>
+			<h2 class="text2">Полосатый зонт</h2>
+			<h2 class="text3">Яблоко</h2>
+			<h2 class="text4">Мяч для волейбола</h2>
+			<h1>Score: <span class="score"></span></h1>
+		</div>
+	</div>	
+	<img src="ship.png" class="ship object1">
+	<img src="зонт.png" class="umbrella1 object2">
+	<img src="зонт2.png" class="umbrella2">
+	<img src="Яблоко.png" class="apple object3">
+	<img src="Мяч.png" class="ball1 object4">
+	<img src="Мяч2.png" class="ball2">
+	<img src="Мяч3.png" class="ball3">
+	<script type="text/javascript">
+		let score = 0
+
+		document.querySelector(".score").innerHTML = score;
+		document.querySelector(".object1").onclick = function(){
+			score = score + 1;
+			document.querySelector(".object1").style.display = "none";
+			alert("Ты нашёл кораблик!");
+			document.querySelector(".text1").style.textDecoration = "line-through";
+			document.querySelector(".score").innerHTML = score;
+		}
+		document.querySelector(".score").innerHTML = score;
+		document.querySelector(".object2").onclick = function(){
+			score = score + 1;
+			document.querySelector(".object2").style.display = "none";
+			alert("Ты нашёл зонтик!");
+			document.querySelector(".text2").style.textDecoration = "line-through";
+			document.querySelector(".score").innerHTML = score;
+		}
+		document.querySelector(".score").innerHTML = score;
+		document.querySelector(".object3").onclick = function(){
+			score = score + 1;
+			document.querySelector(".object3").style.display = "none";
+			alert("Ты нашёл яблоко!");
+			document.querySelector(".text3").style.textDecoration = "line-through";
+			document.querySelector(".score").innerHTML = score;
+		}
+		document.querySelector(".score").innerHTML = score;
+		document.querySelector(".object4").onclick = function(){
+			score = score + 1;
+			document.querySelector(".object4").style.display = "none";
+			alert("Ты нашёл мячик!");
+			document.querySelector(".text4").style.textDecoration = "line-through";
+			document.querySelector(".score").innerHTML = score;
+		}
+	</script>
+</body>
+</html>
